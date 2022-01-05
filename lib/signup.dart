@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterappproject/formscreen.dart';
 
 class SignupPage extends StatelessWidget {
   @override
@@ -63,7 +64,7 @@ class SignupPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignupPage()));
+                              builder: (context) => FormScreen()));
                     },
                     shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.black),
