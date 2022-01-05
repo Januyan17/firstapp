@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                     height: 20,
                   ),
                   Text(
-                    "HEllloo my nmae is januyan im a Mobile developer ",
+                    "HEllloo my name is januyan im a Mobile developer ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.grey[700],
@@ -60,6 +60,7 @@ class HomePage extends StatelessWidget {
               Column(
                 children: <Widget>[
                   MaterialButton(
+                    color: Colors.blue,
                     minWidth: double.infinity,
                     height: 40,
                     onPressed: () {
@@ -69,12 +70,14 @@ class HomePage extends StatelessWidget {
                               builder: (context) => SignupPage()));
                     },
                     shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.black),
+                        side: BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(50)),
                     child: Text(
                       "Next",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.white),
                     ),
                   ),
                 ],

@@ -70,8 +70,10 @@ class SignupPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50)),
                     child: Text(
                       "Sign Up",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.blue),
                     ),
                   ),
                 ],
