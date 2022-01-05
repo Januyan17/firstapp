@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class FormScreen extends StatefulWidget {
@@ -20,27 +18,37 @@ class _FormScreenState extends State<FormScreen> {
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
 
   Widget _buildName() {
-    return TextFormField();
+    return TextFormField(
+      decoration: InputDecoration(labelText: 'Name'),
+      validator: (String? value) {
+        if (value!.isEmpty) {
+          return "Name is Required";
+        }
+      },
+      onSaved: (String? value) {
+        _name = value;
+      },
+    );
   }
 
   Widget? _buildEmail() {
-    return null;
+    return TextFormField();
   }
 
   Widget? _buildPassword() {
-    return null;
+    return TextFormField();
   }
 
   Widget? _buildUrl() {
-    return null;
+    return TextFormField();
   }
 
   Widget? _buildPhoneNumber() {
-    return null;
+    return TextFormField();
   }
 
   Widget? _buildCalories() {
-    return null;
+    return TextFormField();
   }
 
   @override
@@ -58,18 +66,20 @@ class _FormScreenState extends State<FormScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             _buildName(),
-            _buildEmail(),
-            _buildPassword()
-            _buildUrl(),
-            _buildPhoneNumber(),
-            _buildCalories(),
+            // _buildEmail(),
+            // _buildPassword()
+            // _buildUrl(),
+            // _buildPhoneNumber(),
+            // _buildCalories(),
 
             SizedBox(height: 100),
             RaisedButton(
-              child: Text("Submit",style: TextStyle(color: Colors.blue,fontSize: 16),),onPressed:()=>{} ,
-              
+              child: Text(
+                "Submit",
+                style: TextStyle(color: Colors.blue, fontSize: 16),
               ),
-
+              onPressed: () => {},
+            ),
           ],
         ),
       ),
