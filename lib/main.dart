@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                 children: <Widget>[
                   MaterialButton(
                     minWidth: double.infinity,
-                    height: 60,
+                    height: 40,
                     onPressed: () {
                       Navigator.push(
                           context,
