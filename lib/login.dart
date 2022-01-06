@@ -28,7 +28,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Email Address
 
                       TextFormField(
-                        decoration: InputDecoration(labelText: 'Email'),
+                        decoration: InputDecoration(
+                            labelText: 'Email',
+                            border: OutlineInputBorder(),
+                            hintText: "Enter Email Address"),
                       )
                     ],
                   )),

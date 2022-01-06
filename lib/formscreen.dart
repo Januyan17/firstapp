@@ -29,7 +29,7 @@ class _FormPageState extends State<FormPage> {
         child: Center(
           child: Form(
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(30),
               child: Form(
                   key: _formKey,
                   child: Column(
@@ -38,7 +38,8 @@ class _FormPageState extends State<FormPage> {
                       //Email Validation
 
                       TextFormField(
-                        decoration: InputDecoration(labelText: 'Email'),
+                        decoration: InputDecoration(
+                            labelText: 'Email', border: OutlineInputBorder()),
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Required';
@@ -52,11 +53,15 @@ class _FormPageState extends State<FormPage> {
                         },
                         onChanged: (value) => _userEmail = value,
                       ),
+                      SizedBox(height: 30),
 
                       //User Name Validation
 
                       TextFormField(
-                        decoration: InputDecoration(labelText: 'Username'),
+                        decoration: InputDecoration(
+                          labelText: 'Username',
+                          border: OutlineInputBorder(),
+                        ),
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Required';
@@ -71,9 +76,12 @@ class _FormPageState extends State<FormPage> {
                       ),
 
                       //Mobile Number Validation
+                      SizedBox(height: 30),
 
                       TextFormField(
-                        decoration: InputDecoration(labelText: 'Mobile Number'),
+                        decoration: InputDecoration(
+                            labelText: 'Mobile Number',
+                            border: OutlineInputBorder()),
                         obscureText: false,
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -90,9 +98,12 @@ class _FormPageState extends State<FormPage> {
                       ),
 
                       //Password validation
+                      SizedBox(height: 30),
 
                       TextFormField(
-                        decoration: InputDecoration(labelText: 'Password'),
+                        decoration: InputDecoration(
+                            labelText: 'Password',
+                            border: OutlineInputBorder()),
                         obscureText: true,
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -111,12 +122,14 @@ class _FormPageState extends State<FormPage> {
                         },
                         onChanged: (value) => _password = value,
                       ),
+                      SizedBox(height: 30),
 
                       //conform password validation
 
                       TextFormField(
-                        decoration:
-                            InputDecoration(labelText: 'Confirm Password'),
+                        decoration: InputDecoration(
+                            labelText: 'Confirm Password',
+                            border: OutlineInputBorder()),
                         obscureText: true,
                         validator: (value) {
                           if (value!.isEmpty) {
