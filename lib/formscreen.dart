@@ -53,7 +53,7 @@ class _FormPageState extends State<FormPage> {
                         },
                         onChanged: (value) => _userEmail = value,
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 10),
 
                       //User Name Validation
 
@@ -76,12 +76,13 @@ class _FormPageState extends State<FormPage> {
                       ),
 
                       //Mobile Number Validation
-                      SizedBox(height: 30),
+                      SizedBox(height: 10),
 
                       TextFormField(
                         decoration: InputDecoration(
                             labelText: 'Mobile Number',
                             border: OutlineInputBorder()),
+                        keyboardType: TextInputType.number,
                         obscureText: false,
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -98,7 +99,7 @@ class _FormPageState extends State<FormPage> {
                       ),
 
                       //Password validation
-                      SizedBox(height: 30),
+                      SizedBox(height: 10),
 
                       TextFormField(
                         decoration: InputDecoration(
@@ -122,7 +123,7 @@ class _FormPageState extends State<FormPage> {
                         },
                         onChanged: (value) => _password = value,
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 10),
 
                       //conform password validation
 
@@ -145,7 +146,7 @@ class _FormPageState extends State<FormPage> {
                         onChanged: (value) => _confirmPassword = value,
                       ),
 
-                      SizedBox(height: 30),
+                      SizedBox(height: 10),
 
                       Container(
                           alignment: Alignment.center,
