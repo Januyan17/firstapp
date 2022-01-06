@@ -43,3 +43,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/test.png
+    - assets/my.jpg
+    - assets/bg.jpg
