@@ -61,10 +61,8 @@ class SignupPage extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 40,
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => FormScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => FormPage()));
                     },
                     shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.black),
