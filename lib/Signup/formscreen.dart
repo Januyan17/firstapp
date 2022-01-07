@@ -14,8 +14,6 @@ class _FormPageState extends State<FormPage> {
   String _password = '';
   String _confirmPassword = '';
 
-  int? _mobile;
-
   void _SubmitForm() {
     final valid = _formKey.currentState?.validate();
   }
@@ -89,7 +87,7 @@ class _FormPageState extends State<FormPage> {
                             return 'Required';
                           }
 
-                          if (value.length < 10) {
+                          if (value.length != 10) {
                             return 'Invalid Mobile Number';
                           }
 

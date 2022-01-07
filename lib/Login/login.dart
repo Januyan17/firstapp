@@ -14,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.amber,
+        color: Colors.white,
         alignment: Alignment.center,
         child: Center(
           child: Form(
@@ -32,7 +32,36 @@ class _LoginScreenState extends State<LoginScreen> {
                             labelText: 'Email',
                             border: OutlineInputBorder(),
                             hintText: "Enter Email Address"),
-                      )
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "Required";
+                          }
+                        },
+                      ),
+
+                      SizedBox(
+                        height: 10,
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                            labelText: 'Password',
+                            border: OutlineInputBorder(),
+                            hintText: "Enter Password"),
+                        obscureText: true,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'Required';
+                          }
+                        },
+                      ),
+
+                      Container(
+                        alignment: Alignment.center,
+                        child: OutlineButton(
+                          onPressed: null,
+                          child: Text("Login"),
+                        ),
+                      ),
                     ],
                   )),
             ),
